@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/vergars/Documents/dual2/dual2.v
+source_file = 1, C:/Users/vergars/Documents/dual2/Waveform.vwf
+source_file = 1, C:/Users/vergars/Documents/dual2/db/dual2.cbx.xml
+design_name = dual2
+instance = comp, \y0~I\, y0, dual2, 1
+instance = comp, \x0~I\, x0, dual2, 1
+instance = comp, \y1~I\, y1, dual2, 1
+instance = comp, \x1~I\, x1, dual2, 1
+instance = comp, \f1~0\, f1~0, dual2, 1
+instance = comp, \f2~0\, f2~0, dual2, 1
+instance = comp, \f1~I\, f1, dual2, 1
+instance = comp, \f2~I\, f2, dual2, 1

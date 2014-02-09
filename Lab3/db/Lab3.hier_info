@@ -1,0 +1,93 @@
+|alu3
+SW[14] => SW[14].IN2
+SW[15] => SW[15].IN1
+SW[16] => SW[16].IN1
+SW[17] => SW[17].IN1
+Clock => Clock.IN2
+LEDs[0] <= hex7seg:comb_6.port1
+LEDs[1] <= hex7seg:comb_6.port1
+LEDs[2] <= hex7seg:comb_6.port1
+LEDs[3] <= hex7seg:comb_6.port1
+LEDs[4] <= hex7seg:comb_6.port1
+LEDs[5] <= hex7seg:comb_6.port1
+LEDs[6] <= hex7seg:comb_6.port1
+
+
+|alu3|reg4:comb_3
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[0]~reg0.ENA
+Resetn => Q[2]~reg0.ENA
+Resetn => Q[1]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu3|reg4:comb_4
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Resetn => Q[0]~reg0.ACLR
+Resetn => Q[1]~reg0.ACLR
+Resetn => Q[2]~reg0.ACLR
+Resetn => Q[0]~reg0.ENA
+Resetn => Q[2]~reg0.ENA
+Resetn => Q[1]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu3|adder3:comb_5
+carryin => S.IN1
+carryin => C.IN0
+carryin => C.IN0
+X[0] => S.IN0
+X[0] => C.IN0
+X[0] => C.IN1
+X[1] => S.IN0
+X[1] => C.IN0
+X[1] => C.IN1
+X[2] => S.IN0
+X[2] => C.IN0
+X[2] => C.IN1
+Y[0] => S.IN1
+Y[0] => C.IN1
+Y[0] => C.IN1
+Y[1] => S.IN1
+Y[1] => C.IN1
+Y[1] => C.IN1
+Y[2] => S.IN1
+Y[2] => C.IN1
+Y[2] => C.IN1
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+carryout <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu3|hex7seg:comb_6
+SIGIN[0] => Decoder0.IN3
+SIGIN[1] => Decoder0.IN2
+SIGIN[2] => Decoder0.IN1
+SIGIN[3] => Decoder0.IN0
+SIGOUT[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SIGOUT[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+dual2
+f1,output,user_entered
+f1~0,comb,compiler_generated
+f2,output,user_entered
+f2~0,comb,compiler_generated
+f2~0_wirecell,comb,compiler_generated
+x0,input,user_entered
+x1,input,user_entered
+y0,input,user_entered
+y1,input,user_entered
+,hierarchy,user_entered

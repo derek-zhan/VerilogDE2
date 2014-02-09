@@ -1,0 +1,13 @@
+module alu3(SW, Clock, RESET, carryin, carryout)
+	wire [2:0]C;
+	
+	input carrying, Clock, RESET;
+	output reg carryout;
+	output [0:6]LEDs;
+	
+	reg4 stage0 (SW[17:15],Clock,RESET,C[0])
+	reg4 stage1 (SW[17:15],Clock,RESET,C[1])
+	adder3 fulladd (0,C[0],C[1],C[2],carryout)
+	hex7seg disp (C,LEDs)
+	
+endmodule

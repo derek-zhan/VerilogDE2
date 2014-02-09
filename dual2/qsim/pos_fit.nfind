@@ -1,0 +1,13 @@
+dual2
+f1,output,user_entered
+f1~0,comb,compiler_generated
+f2,output,user_entered
+f2~0,comb,compiler_generated
+x0,input,user_entered
+x1,input,user_entered
+y0,input,user_entered
+y1,input,user_entered
+~ASDO~,input,compiler_generated
+~LVDS41p/nCEO~,output,compiler_generated
+~nCSO~,input,compiler_generated
+,hierarchy,user_entered

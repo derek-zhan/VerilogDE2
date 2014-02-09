@@ -1,0 +1,14 @@
+module name(x3,x2,x1,x0,n0,n1,n2,n3,n4,n5,n6);
+    input x3,x2,x1,x0;
+	 output n0,n1,n2,n3,n4,n5,n6;
+	 
+	 assign n0= (~x3*~x2*~x1*~x0)+(x2*x1*~x0);
+	 assign n1= (~x1*x0)+(~x2*x1*~x0);
+	 assign n2= (~x2*~x1*x0)+(~x2*x1*~x0);
+	 assign n3= (x1*~x0)+(x2*x1)+(x2*~x1*~x0);
+	 assign n4= (x2*~x1*x0)+(~x2*x1*x0)+(x2*x1*~x0);
+	 assign n5= (x2*x1*~x0);
+	 assign n6= (~x2*~x1*~x0)+(x2*x1)+(x1*~x0);
+	 
+	endmodule
+	
